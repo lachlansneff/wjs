@@ -1,0 +1,24 @@
+[package]
+name = "wjs"
+version = "0.1.0"
+authors = ["Lachlan Sneff <lachlan.sneff@gmail.com>"]
+edition = "2018"
+
+[workspace]
+members = [
+    "derive",
+]
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+wjs-derive = { path = "derive" }
+ouroboros = "0.9.3"
+
+cfg-if = "1.0"
+swc_common = "0.10.20"
+
+
+[dependencies.swc_ecmascript]
+version = "0.36.0"
+features = ["parser", "visit", "utils"]
